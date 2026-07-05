@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shuddh Swad - Authentic Traditional Snacks</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/food12.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 15s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Top Announcement Bar -->
+    <div class="bg-amber-600 text-white py-2 px-4 text-center">
+        <p class="marquee text-sm font-medium">
+            <span>✨ Free Shipping on Prepaid Orders ✨ &nbsp;&nbsp;&nbsp; 🎉 Special Diwali Offers Available 🎉 &nbsp;&nbsp;&nbsp; 🚚 Fast Delivery Across India 🚚</span>
+        </p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="flex-shrink-0">
+                        <img class="h-10" src="https://shuddhswad.shop/cdn/shop/files/Picsart_25-07-07_02-13-26-780.png" alt="Shuddh Swad Logo">
+                    </a>
+                    <div class="hidden md:ml-6 md:flex md:space-x-8">
+                        <a href="#" class="border-amber-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                        <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Products</a>
+                        <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">About Us</a>
+                        <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <div class="relative">
+                            <input type="text" placeholder="Search products..." class="hidden md:block pl-10 pr-4 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500">
+                            <i data-feather="search" class="absolute left-3 top-2.5 text-gray-400"></i>
+                        </div>
+                    </div>
+                    <div class="ml-4 flex items-center md:ml-6">
+                        <button class="p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500">
+                            <i data-feather="user"></i>
+                        </button>
+                        <button class="ml-3 p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500">
+                            <i data-feather="shopping-cart"></i>
+                        </button>
+                        <button class="md:hidden ml-3 p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500">
+                            <i data-feather="menu"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-bg text-white py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4" data-aos="fade-up">Experience the Purity of Tradition</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">Authentic Indian snacks made with love and uncompromising hygiene standards</p>
+            <a href="#products" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-amber-700 bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                Shop Now <i data-feather="arrow-right" class="ml-2"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Featured Products -->
+    <section id="products" class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl" data-aos="fade-up">
+                    Our Featured Products
+                </h2>
+                <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4" data-aos="fade-up" data-aos-delay="100">
+                    Handcrafted with traditional recipes and premium ingredients
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4">
+                <!-- Product 1 -->
+                <div class="product-card group relative bg-white border border-gray-200 rounded-lg overflow-hidden transition-all duration-300" data-aos="fade-up">
+                    <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-t-lg bg-gray-200">
+                        <img src="https://shuddhswad.shop/cdn/shop/files/A17_7296-Edit.jpg" alt="Traditional Thekua" class="w-full h-full object-cover object-center group-hover:opacity-75">
+                        <div class="absolute top-2 left-2 bg-amber-500 text-white text-xs font-bold px-2 py-1 rounded">SALE</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-medium text-gray-900">
+                            <a href="#">
+                                <span aria-hidden="true" class="absolute inset-0"></span>
+                                Traditional Thekua
+                            </a>
+                        </h3>
+                        <div class="mt-2 flex items-center">
+                            <p class="text-sm text-gray-500">Authentic Bihar specialty</p>
+                        </div>
+                        <div class="mt-3 flex justify-between items-center">
+                            <div>
+                                <p class="text-sm text-gray-500 line-through">₹599.00</p>
+                                <p class="text-lg font-semibold text-gray-900">₹299.00</p>
+                            </div>
+                            <button class="bg-amber-500 hover:bg-amber-600 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card group relative bg-white border border-gray-200 rounded-lg overflow-hidden transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-t-lg bg-gray-200">
+                        <img src="https://shuddhswad.shop/cdn/shop/files/A17_7297-Edit.jpg" alt="Jaggery Thekua" class="w-full h-full object-cover object-center group-hover:opacity-75">
+                        <div class="absolute top-2 left-2 bg-amber-500 text-white text-xs font-bold px-2 py-1 rounded">SALE</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-medium text-gray-900">
+                            <a href="#">
+                                <span aria-hidden="true" class="absolute inset-0"></span>
+                                Jaggery Thekua
+                            </a>
+                        </h3>
+                        <div class="mt-2 flex items-center">
+                            <p class="text-sm text-gray-500">Healthy sweet snack</p>
+                        </div>
+                        <div class="mt-3 flex justify-between items-center">
+                            <div>
+                                <p class="text-sm text-gray-500 line-through">₹599.00</p>
+                                <p class="text-lg font-semibold text-gray-900">₹299.00</p>
+                            </div>
+                            <button class="bg-amber-500 hover:bg-amber-600 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card group relative bg-white border border-gray-200 rounded-lg overflow-hidden transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-t-lg bg-gray-200">
+                        <img src="https://shuddhswad.shop/cdn/shop/files/rn-image_picker_lib_temp_35376bcc-ef2d-4326-9844-23976fb850f9.jpg" alt="Traditional Thekua 3 Combo" class="w-full h-full object-cover object-center group-hover:opacity-75">
+                        <div class="absolute top-2 left-2 bg-amber-500 text-white text-xs font-bold px-2 py-1 rounded">SALE</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-medium text-gray-900">
+                            <a href="#">
+                                <span aria-hidden="true" class="absolute inset-0"></span>
+                                Traditional Thekua 3 Combo
+                            </a>
+                        </h3>
+                        <div class="mt-2 flex items-center">
+                            <p class="text-sm text-gray-500">Perfect for gifting</p>
+                        </div>
+                        <div class="mt-3 flex justify-between items-center">
+                            <div>
+                                <p class="text-sm text-gray-500 line-through">₹1,799.00</p>
+                                <p class="text-lg font-semibold text-gray-900">₹799.00</p>
+                            </div>
+                            <button class="bg-amber-500 hover:bg-amber-600 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card group relative bg-white border border-gray-200 rounded-lg overflow-hidden transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-t-lg bg-gray-200">
+                        <img src="https://shuddhswad.shop/cdn/shop/files/rn-image_picker_lib_temp_25905871-82ec-49fc-ba35-3afa5162711b.jpg" alt="Jaggery Thekua 3 Combo" class="w-full h-full object-cover object-center group-hover:opacity-75">
+                        <div class="absolute top-2 left-2 bg-amber-500 text-white text-xs font-bold px-2 py-1 rounded">SALE</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-medium text-gray-900">
+                            <a href="#">
+                                <span aria-hidden="true" class="absolute inset-0"></span>
+                                Jaggery Thekua 3 Combo
+                            </a>
+                        </h3>
+                        <div class="mt-2 flex items-center">
+                            <p class="text-sm text-gray-500">Sweet festive package</p>
+                        </div>
+                        <div class="mt-3 flex justify-between items-center">
+                            <div>
+                                <p class="text-sm text-gray-500 line-through">₹1,799.00</p>
+                                <p class="text-lg font-semibold text-gray-900">₹799.00</p>
+                            </div>
+                            <button class="bg-amber-500 hover:bg-amber-600 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10 text-center">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-amber-600 hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 transition-all duration-300">
+                    View All Products <i data-feather="arrow-right" class="ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl" data-aos="fade-up">
+                    Our Core Values
+                </h2>
+                <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4" data-aos="fade-up" data-aos-delay="100">
+                    Principles that guide everything we do
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+                <!-- Value 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center" data-aos="fade-up">
+                    <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-md bg-amber-100 text-amber-600 mb-4">
+                        <i data-feather="leaf" class="h-6 w-6"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Sustainability</h3>
+                    <p class="text-gray-500">
+                        We source ingredients responsibly and use eco-friendly packaging to minimize our environmental footprint.
+                    </p>
+                </div>
+
+                <!-- Value 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-md bg-amber-100 text-amber-600 mb-4">
+                        <i data-feather="award" class="h-6 w-6"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Quality</h3>
+                    <p class="text-gray-500">
+                        We never compromise on quality, using only premium ingredients to create exceptional snacks.
+                    </p>
+                </div>
+
+                <!-- Value 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-md bg-amber-100 text-amber-600 mb-4">
+                        <i data-feather="heart" class="h-6 w-6"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Health</h3>
+                    <p class="text-gray-500">
+                        We believe healthy snacking should be delicious, creating nutritious options without artificial additives.
+                    </p>
+                </div>
+
+                <!-- Value 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-md bg-amber-100 text-amber-600 mb-4">
+                        <i data-feather="users" class="h-6 w-6"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Community</h3>
+                    <p class="text-gray-500">
+                        We support local farmers and give back to communities through various charitable initiatives.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+                <div class="mb-8 lg:mb-0" data-aos="fade-right">
+                    <img src="http://static.photos/food/800x800/5" alt="Traditional Indian snacks" class="rounded-lg shadow-xl">
+                </div>
+                <div data-aos="fade-left">
+                    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        The Shuddh Swad Story
+                    </h2>
+                    <p class="mt-3 text-lg text-gray-500">
+                        A journey of passion, purity, and the pursuit of an Indian dream. Our mission is to be India's finest snacks brand, delivering high-quality, hygienic, and affordable traditional snacks that you can trust and enjoy.
+                    </p>
+                    <div class="mt-6">
+                        <div class="flex items-start mt-6">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-amber-500 text-white">
+                                    <i data-feather="book" class="h-6 w-6"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-900">Authentic Recipes</h4>
+                                <p class="mt-1 text-gray-500">
+                                    We stay true to the traditions. Our recipes are passed down through generations, ensuring every bite is a genuine taste of heritage.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start mt-6">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-amber-500 text-white">
+                                    <i data-feather="shield" class="h-6 w-6"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-900">Uncompromising Hygiene</h4>
+                                <p class="mt-1 text-gray-500">
+                                    From our kitchen to your home, we maintain the strictest hygiene standards. Because good taste begins with good health.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-amber-600 hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 transition-all duration-300">
+                            Read Our Full Story
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-amber-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl" data-aos="fade-up">
+                    What Our Customers Say
+                </h2>
+                <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-600 sm:mt-4" data-aos="fade-up" data-aos-delay="100">
+                    Real experiences from our happy customers
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up">
+                    <div class="flex items-center mb-4">
+                        <img class="w-12 h-12 rounded-full" src="http://static.photos/people/100x100/1" alt="Customer">
+                        <div class="ml-4">
+                            <h4 class="text-lg font-medium text-gray-900">Rahul Sharma</h4>
+                            <div class="flex text-amber-500">
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "The Traditional Thekua took me back to my childhood. The taste is exactly how my grandmother used to make it. Will definitely order again!"
+                    </p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <img class="w-12 h-12 rounded-full" src="http://static.photos/people/100x100/2" alt="Customer">
+                        <div class="ml-4">
+                            <h4 class="text-lg font-medium text-gray-900">Priya Patel</h4>
+                            <div class="flex text-amber-500">
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "I was skeptical about ordering snacks online, but Shuddh Swad exceeded my expectations. The packaging was excellent and the products were fresh."
+                    </p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <img class="w-12 h-12 rounded-full" src="http://static.photos/people/100x100/3" alt="Customer">
+                        <div class="ml-4">
+                            <h4 class="text-lg font-medium text-gray-900">Amit Kumar</h4>
+                            <div class="flex text-amber-500">
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "The Jaggery Thekua combo was perfect for gifting during Diwali. My relatives loved it and now they're all asking where I got it from!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-amber-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold sm:text-4xl" data-aos="fade-up">
+                Ready to Experience Authentic Taste?
+            </h2>
+            <p class="mt-3 max-w-2xl mx-auto text-xl sm:mt-4" data-aos="fade-up" data-aos-delay="100">
+                Join thousands of happy customers enjoying our traditional snacks
+            </p>
+            <div class="mt-8 flex justify-center space-x-4" data-aos="fade-up" data-aos-delay="200">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-amber-700 bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-300">
+                    Shop Now
+                </a>
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-300">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Shuddh Swad</h3>
+                    <p class="text-gray-400">
+                        Authentic and pure products delivered to your doorstep. Experience the true taste of tradition.
+                    </p>
+                    <div class="flex mt-4 space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Track Order</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Return & Refund Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Our Story</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Shipping Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Get in Touch</h3>
+                    <address class="text-gray-400 not-italic">
+                        Adra, Near DVC More,<br>
+                        West Bengal 723121, India.<br><br>
+                        <a href="tel:+918016380734" class="hover:text-white">+91 9876543210</a><br>
+                        Mon - Fri, 10am - 6:30pm<br>
+                        <a href="mailto:contact@shuddhswad.shop" class="hover:text-white">contact@shuddhswad.shop</a>
+                    </address>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p>© 2025 Shuddh Swad. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();
+    </script>
+</body>
+</html>
