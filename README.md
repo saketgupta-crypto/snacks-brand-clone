@@ -4,6 +4,12 @@ A modern, responsive landing page for **Shuddh Swad**, showcasing authentic Indi
 
 ---
 
+## 🌐 Live Demo
+
+👉 https://shuddh-swadd.netlify.app/
+
+---
+
 ## 📸 Preview
 
 ![Shuddh Swad Banner](images/Pre1.png)
